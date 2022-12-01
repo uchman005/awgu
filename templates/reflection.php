@@ -24,13 +24,16 @@
                             <time datetime="2020"><?= $reflection->created ?></time>
                         </li>
                     </ul>
-                    <img src="images/single-blog-post-1-770x458.jpg" alt="" width="770" height="458">
-                    <h4><?=$reflection->body?></h4>
-                   
-                
+                    <?php if (isset($reflection->image1) && $reflection->image1 != "") : ?>
+                        <img src="_store/<?= $reflection->image1 ?>" alt="" width="571" height="353">
+                    <?php endif; ?>
+                    <h4><?= $reflection->body ?></h4>
+                    <?php if (isset($reflection->image2) && $reflection->image2 != "") : ?>
+                        <img src="_store/<?= $reflection->image2 ?>" alt="" width="571" height="353">
+                    <?php endif; ?>
                 </article>
-             
-          
+
+
             </div>
         </div>
     </div>

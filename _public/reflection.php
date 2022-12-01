@@ -8,6 +8,14 @@ $Route->add("/Awgu/bishop/reflection", function () {
     $Template->render("reflections");
 }, "GET");
 
+$Route->add("/Awgu/login", function () {
+    $Template = new Apps\Template;
+    $Template->addheader("layouts.header");
+    $Template->addfooter("layouts.footer");
+    $Template->assign("title", "Login");
+    $Template->render("login");
+}, "GET");
+
 $Route->add("/Awgu/bishop/reflection/{id}", function ($id) {
     $Template = new Apps\Template;
     $Core = new Apps\Core;
