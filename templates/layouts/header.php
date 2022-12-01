@@ -76,6 +76,7 @@
                     <li class="rd-nav-item"><a class="rd-nav-link" href="./bishop-history">Bishop</a>
                       <!-- RD Navbar Dropdown-->
                       <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./bishop/reflection">Bishop`s Reflection</a></li>
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./appointment">Appointment as Bishop</a></li>
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./coat-of-arm">Coat of Arm</a></li>
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./episcopal-vicars">Episcopal Vicars</a></li>
@@ -87,7 +88,7 @@
                     <li class="rd-nav-item"><a class="rd-nav-link" href="javascript:void(0)">Associations</a>
                       <!-- RD Navbar Dropdown-->
                       <ul class="rd-menu rd-navbar-dropdown">
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./priests">Priests</a></li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./ordination">Priests</a></li>
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./seminarians">Seminarians</a></li>
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./religious">Religious</a></li>
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="./catchiests"> catchiests</a></li>

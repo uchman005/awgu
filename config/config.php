@@ -45,7 +45,7 @@ define("domain", "https://localhost/Awgu/");
 define("db_host","localhost");
 define("db_user","root");
 define("db_password","");
-define("db_name","db");
+define("db_name","awgu");
 define("db_port",null);
 define("db_charset","utf8");
 define("db_socket",null);

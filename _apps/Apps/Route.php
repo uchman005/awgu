@@ -125,7 +125,7 @@ class Route{
 				$strKeyVal_arr[$ar_str_key_name] = $ar_val; 
 				$strKeys[] = $ar_key; 
 				$strVals[] = $ar_val; 
-				$route['expression'] = str_replace($func_param_str,$ar_val,$route['expression']);
+				@$route['expression'] = str_replace($func_param_str,$ar_val,$route['expression']);
 			}
 	
 		

@@ -13,6 +13,11 @@ class Core extends Model
 		parent::__construct();
 	}
 
-
-	
+	public function GetUserInfo($id)
+	{
+		$query = "SELECT * FROM `users` WHERE `id`= '$id'";
+		$query = mysqli_query($this->dbCon, $query);
+		$query = mysqli_fetch_object($query);
+		return $query;
+	}
 }
