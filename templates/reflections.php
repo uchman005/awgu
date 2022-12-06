@@ -23,7 +23,7 @@ $sql = "SELECT * FROM `reflections`  \n"
     <div class="container">
         <div class="row row-50 row-xxl-70">
             <?php
-            $sql = "SELECT * FROM `reflections`";
+            $sql = "SELECT * FROM `reflections` ORDER BY `id` DESC";
             $exec = mysqli_query($Core->dbCon, $sql);
             while ($reflection = mysqli_fetch_object($exec)) : ?>
 
