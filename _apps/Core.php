@@ -35,8 +35,13 @@ class Core extends Model
 	{
 		$sql = "UPDATE `users` SET `name`='$name',`role`='$role',`email`='$email',`password`='$password' WHERE  `id` = '$id' ";
 		return mysqli_query($this->dbCon, $sql);
-
 	}
+	public function CreateUser($email, $name, $password, $dod, $parish)
+	{
+		$sql = "INSERT INTO `users` (`name`,`email`, `password`, `dod`, `parish`) VALUES ('$name', '$email','$password', '$dod', '$parish')";
+		return mysqli_query($this->dbCon, $sql);
+	}
+
 	// public function EditReflection($id, $title, $body, $image, $image2)
 	// {
 	// 	$sql = "UPDATE `users` SET `name`='$name',`role`='$role',`email`='$email',`password`='$password' WHERE  `id` = '$id' ";

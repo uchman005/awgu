@@ -53,3 +53,16 @@ $Route->add("/awgu/user/priests/addpriest", function () {
     $Template->assign("title", "Dashboard");
     $Template->render("dashboard.addpriest");
 }, "GET");
+
+$Route->add("/awgu/users/create",function(){
+    $Template = new Template(auth_url);
+    $Core= new Core;
+    $Data = $Core->data;
+    $email = $Data->email;
+    $name = $Data->name;
+    $password = $Data->password;
+    $dod = $Data->dod;
+    $parish = $Data->parish;
+$create = $Core->CreateUser($email, $name, $password, $dod, $parish);
+
+} ,"POST");

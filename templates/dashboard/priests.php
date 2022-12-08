@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li ><a href="./user/priests/addpriest" class=" btn btn-success btn-sm">Add New</a></li>
+                        <li><a href="./user/priests/addpriest" class=" btn btn-success btn-sm">Add New</a></li>
                     </ol>
                 </div>
             </div>
@@ -42,26 +42,33 @@
                                 <th>Name</th>
                                 <th>Date Of Ordination</th>
                                 <th>Parish</th>
-                               
                                 <th>Manage</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>183</td>
-                                <td>John Doe</td>
-                                <td>11-7-2014</td>
-                                <td><span class="tag tag-success">Approved</span></td>
-                                <td>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <button class="btn btn-outline-success btn-sm">Edit</button>
+                            <?php
+                            $sql = "SELECT * FROM `users` WHERE `role`='priest'";
+                            $i = 0;
+                            $priests = mysqli_query($Core->dbCon, $sql);
+                            while ($priest = mysqli_fetch_object($priests)) : $i++
+                            ?>
+                                <tr>
+                                    <td><?= $i ?></td>
+                                    <td><?= $priest->name ?></td>
+                                    <td><?= $priest->dod ?></td>
+                                    <td><?= $priest->parish ?></td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <a class="btn btn-outline-success btn-sm">Edit</a>
+                                            </div>
+                                            <div class="col-6">
+                                                <a class="btn btn-outline-danger btn-sm">Delete</a>
+                                            </div>
                                         </div>
-                                        <div class="col-6">    <button class="btn btn-outline-danger btn-sm">Delete</button></div>
-                                    </div>
-                                </td>
-                            </tr>
-                           
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
                         </tbody>
                     </table>
                 </div>
@@ -70,3 +77,4 @@
             <!-- /.card -->
         </div>
     </div>
+</div>
