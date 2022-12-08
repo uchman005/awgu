@@ -38,9 +38,9 @@ define("session_path","./_sessions/");
 define("session_timout",20);
 define("session_delete_timout",30);
 define("auth_session_key","logged_in");
-define("auth_url","/auth/login");
+define("auth_url","/awgu/login");
 
-define("domain", "https://localhost/Awgu/");
+define("domain", "https://localhost/awgu/");
 
 define("db_host","localhost");
 define("db_user","root");

@@ -45,7 +45,7 @@
             <div class="container">
                 <div class="box-1">
                     <h4>Sign In</h4>
-                    <form class="rd-form rd-form-small">
+                    <form class="rd-form rd-form-small" action="./users/login" method="post">
                         <div class="form-wrap">
                             <input class="form-input" id="login-email" type="email" name="email" data-constraints="@Email @Required">
                             <label class="form-label" for="login-email">E-mail</label>

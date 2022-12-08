@@ -1,0 +1,1 @@
+a:5:{s:5:"token";O:8:"stdClass":3:{s:3:"tik";i:1670508297;s:3:"tok";s:40:"21403d17b2b3c0a0599096fb20a50aec7dcc6c4e";s:5:"token";s:40:"1c7e1c43522c189e9562e70f4dc6f97868564a3b";}s:9:"auth_time";s:19:"08-12-2022 15:04:57";s:5:"accid";i:2;s:9:"logged_in";b:1;s:6:"errors";a:3:{s:5:"error";s:16:"Login Successful";s:4:"type";s:7:"success";s:5:"route";s:20:"/awgu/user/dashboard";}}

@@ -1,10 +1,3 @@
-
-<?php
-$sql = "SELECT * FROM `reflections`  \n"
-    . "ORDER BY `reflections`.`id` DESC";
-    $reflections = mysqli_query($Core->dbCon, $sql);
-
-?>
 <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(<?= $assets ?>/images/A4.jpg);">
     <div class="breadcrumbs-custom-inner">
         <div class="container breadcrumbs-custom-container">

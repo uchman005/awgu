@@ -1,22 +1,25 @@
 <?php
 
-$Route->add("/Awgu/bishop/reflection", function () {
-    $Template = new Apps\Template;
+use Apps\Template;
+use Apps\Core;
+
+$Route->add("/awgu/bishop/reflection", function () {
+    $Template = new Template;
     $Template->addheader("layouts.header");
     $Template->addfooter("layouts.footer");
     $Template->assign("title", "Bishop`s Reflections");
     $Template->render("reflections");
 }, "GET");
 
-$Route->add("/Awgu/login", function () {
-    $Template = new Apps\Template;
+$Route->add("/awgu/login", function () {
+    $Template = new Template;
     $Template->assign("title", "Login");
     $Template->render("login");
 }, "GET");
 
-$Route->add("/Awgu/bishop/reflection/{id}", function ($id) {
-    $Template = new Apps\Template;
-    $Core = new Apps\Core;
+$Route->add("/awgu/bishop/reflection/{id}", function ($id) {
+    $Template = new Template;
+    $Core = new Core;
     $Template->addheader("layouts.header");
     $sql = "SELECT * FROM `reflections` WHERE `id` = $id";
     $reflection = mysqli_query($Core->dbCon, $sql);

@@ -4,9 +4,10 @@
 define('DOT', '.');
 require_once DOT . "/bootstrap.php";
 require_once DOT . "/_public/reflection.php";
+require_once DOT . "/_public/users.php";
 
 //Home page//
-$Route->add('/Awgu/', function () {
+$Route->add('/awgu/', function () {
     
     $Template = new Apps\Template;
     $Template->addheader("layouts.header");
@@ -18,7 +19,7 @@ $Route->add('/Awgu/', function () {
 }, 'GET');
 //Home page//
 
-$Route->add('/Awgu/{page}', function ($page) {
+$Route->add('/awgu/{page}', function ($page) {
     
     $Template = new Apps\Template;
     $Template->addheader("layouts.header");
