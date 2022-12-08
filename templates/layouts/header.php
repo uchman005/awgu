@@ -118,6 +118,8 @@
 
                     <li class="rd-nav-item"><a class="rd-nav-link" href="./contact">Contacts</a>
                     </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="./login">Login</a>
+                    </li>
                   </ul>
                 </div>
               </div>
