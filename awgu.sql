@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2022 at 09:41 PM
+-- Generation Time: Dec 08, 2022 at 04:01 PM
 -- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,9 +54,11 @@ INSERT INTO `reflections` (`id`, `title`, `user`, `body`, `image1`, `image2`, `c
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(200) DEFAULT NULL,
-  `role` varchar(200) DEFAULT NULL,
+  `role` varchar(200) DEFAULT 'priest',
   `email` varchar(200) DEFAULT NULL,
   `password` varchar(200) DEFAULT NULL,
+  `dod` date DEFAULT NULL,
+  `parish` varchar(200) DEFAULT NULL,
   `created` timestamp(5) NOT NULL DEFAULT current_timestamp(5)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -64,9 +66,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `role`, `email`, `password`, `created`) VALUES
-(1, 'Chinwenma', 'bishop', 'ladymediatrix27@gmail.com', 'lololololo', '2022-12-01 18:44:29.00000'),
-(2, 'Ms ChiChi', 'priest', 'lehdggxvvx', 'lolololo', '2022-12-01 18:44:40.00000');
+INSERT INTO `users` (`id`, `name`, `role`, `email`, `password`, `dod`, `parish`, `created`) VALUES
+(1, 'Chinwenma', 'bishop', 'ladymediatrix27@gmail.com', 'test', NULL, NULL, '2022-12-01 18:44:29.00000'),
+(2, 'Ms ChiChi', 'priest', 'obiefunamarcel@gmail.com', 'test', NULL, NULL, '2022-12-01 18:44:40.00000');
 
 --
 -- Indexes for dumped tables
