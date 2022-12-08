@@ -26,7 +26,7 @@
                         <form action="./users/create" method="post" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Full Name</label>
+                                    <label for="">Full Name</label>
                                     <input type="text" class="form-control" placeholder="Enter fullname" name="name">
                                 </div>
                                 <div class="form-group">
@@ -38,11 +38,11 @@
                                     <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Date of Ordination</label>
+                                    <label for="date">Date of Ordination</label>
                                     <input type="date" class="form-control" placeholder="Enter date" name="dod">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Parish</label>
+                                    <label for="parish">Parish</label>
                                     <input type="text" class="form-control" placeholder="Enter parish" name="parish">
                                 </div>
                                 <div class="form-group">

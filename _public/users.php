@@ -66,3 +66,23 @@ $Route->add("/awgu/users/create",function(){
 $create = $Core->CreateUser($email, $name, $password, $dod, $parish);
 
 } ,"POST");
+$Route->add("/awgu/user/reflect", function () {
+    $Template = new Template(auth_url);
+    $Core = new Core;
+    $User = $Core->GetUserInfo($Template->storage("accid"));
+    $Template->addheader("dashboard.layouts.header");
+    $Template->addfooter("dashboard.layouts.footer");
+    $Template->assign("User", $User);
+    $Template->assign("title", "Dashboard");
+    $Template->render("dashboard.reflect");
+}, "GET");
+$Route->add("/awgu/user/priests/addreflect", function () {
+    $Template = new Template(auth_url);
+    $Core = new Core;
+    $User = $Core->GetUserInfo($Template->storage("accid"));
+    $Template->addheader("dashboard.layouts.header");
+    $Template->addfooter("dashboard.layouts.footer");
+    $Template->assign("User", $User);
+    $Template->assign("title", "Dashboard");
+    $Template->render("dashboard.addreflect");
+}, "GET");
