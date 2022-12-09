@@ -5,6 +5,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Priests</h1>
+                    <h5><?= $Self->Toast(); ?></h5>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -42,6 +43,7 @@
                                 <th>Name</th>
                                 <th>Date Of Ordination</th>
                                 <th>Parish</th>
+                                <th>Image</th>
                                 <th>Manage</th>
                             </tr>
                         </thead>
@@ -57,6 +59,7 @@
                                     <td><?= $priest->name ?></td>
                                     <td><?= $priest->dod ?></td>
                                     <td><?= $priest->parish ?></td>
+                                    <td><img src="./_store/<?= $priest->img ?>" alt="<?= $priest->name ?>"></td>
                                     <td>
                                         <div class="row">
                                             <div class="col-6">

@@ -36,9 +36,9 @@ class Core extends Model
 		$sql = "UPDATE `users` SET `name`='$name',`role`='$role',`email`='$email',`password`='$password' WHERE  `id` = '$id' ";
 		return mysqli_query($this->dbCon, $sql);
 	}
-	public function CreateUser($email, $name, $password, $dod, $parish)
+	public function CreateUser($email, $name, $password, $dod, $parish, $img_name)
 	{
-		$sql = "INSERT INTO `users` (`name`,`email`, `password`, `dod`, `parish`) VALUES ('$name', '$email','$password', '$dod', '$parish')";
+		$sql = "INSERT INTO `users` (`name`,`email`, `password`, `dod`, `parish`,`img`) VALUES ('$name', '$email','$password', '$dod', '$parish', '$img_name')";
 		return mysqli_query($this->dbCon, $sql);
 	}
 

@@ -54,18 +54,42 @@ $Route->add("/awgu/user/priests/addpriest", function () {
     $Template->render("dashboard.addpriest");
 }, "GET");
 
-$Route->add("/awgu/users/create",function(){
+$Route->add("/awgu/users/create", function () {
     $Template = new Template(auth_url);
-    $Core= new Core;
+    $Core = new Core;
     $Data = $Core->data;
     $email = $Data->email;
     $name = $Data->name;
     $password = $Data->password;
     $dod = $Data->dod;
     $parish = $Data->parish;
-$create = $Core->CreateUser($email, $name, $password, $dod, $parish);
+    $img_name = md5($email);
 
-} ,"POST");
+    $handle = new \Verot\Upload\Upload($_FILES['img']);
+    if ($handle->uploaded) {
+        $ext = $handle->file_src_name_ext;
+        $handle->file_new_name_body   = $img_name;
+        $handle->file_overwrite       = true;
+        $handle->image_resize         = true;
+        $handle->image_x              = 200;
+        $handle->image_ratio_y        = true;
+        $handle->process('_store/');
+        if ($handle->processed) {
+            $img_name = $img_name . DOT . $ext;
+            $handle->clean();
+        } else {
+            echo 'error : ' . $handle->error;
+        }
+    }
+
+    $create = $Core->CreateUser($email, $name, $password, $dod, $parish, $img_name);
+    if ($create) {
+        $Template->setError("Priest created successfully", "success", "/awgu/user/priests");
+        $Template->redirect("/awgu/user/priests");
+    }
+    $Template->setError("Priest creation failed due to network, try again", "warning", "/awgu/user/priests");
+    $Template->redirect("/awgu/user/priests");
+}, "POST");
 $Route->add("/awgu/user/reflect", function () {
     $Template = new Template(auth_url);
     $Core = new Core;
