@@ -27,15 +27,15 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="">Full Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter fullname" name="name">
+                                    <input type="text" class="form-control" placeholder="Enter fullname" name="name" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="date">Date of Ordination</label>
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="parish">Parish</label>
-                                    <input type="text" class="form-control" placeholder="Enter parish" name="parish">
+                                    <input type="text" class="form-control" placeholder="Enter parish" name="parish" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputFile">Passport</label>

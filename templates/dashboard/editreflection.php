@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="flectionauthor">Author</label>
-                                    <input type="email" class="form-control" placeholder="Writer`s  name">
+                                    <input type="text" class="form-control" placeholder="Writer`s  name">
                                 </div>
                                 <div class="form-group">
                                     <label for="body">Body</label>
