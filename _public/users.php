@@ -90,6 +90,21 @@ $Route->add("/awgu/users/create", function () {
     $Template->setError("Priest creation failed due to network, try again", "warning", "/awgu/user/priests");
     $Template->redirect("/awgu/user/priests");
 }, "POST");
+
+$Route->add("/awgu/users/edit/{id}", function ($id) {
+    $Template = new Template(auth_url);
+    $Core = new Core;
+    $user = $Core->GetUserInfo($id);
+    $Template->addheader("dashboard.layouts.header");
+    $Template->addfooter("dashboard.layouts.footer");
+    $Template->assign("priest", $user);
+    $Template->assign("title", "Edit " . $user->name);
+    $Template->render("dashboard.editpriest");
+}, "GET");
+
+
+
+
 $Route->add("/awgu/user/reflect", function () {
     $Template = new Template(auth_url);
     $Core = new Core;

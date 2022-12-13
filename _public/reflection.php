@@ -29,3 +29,14 @@ $Route->add("/awgu/bishop/reflection/{id}", function ($id) {
     $Template->assign("title", $reflection->title);
     $Template->render("reflection");
 }, "GET");
+
+$Route->add("/awgu/bishop/reflection/edit/{id}", function ($id) {
+    $Template = new Template(auth_url);
+    $Core = new Core;
+    // $user = $Core->GetUserInfo($id);
+    // $Template->addheader("dashboard.layouts.header");
+    // $Template->addfooter("dashboard.layouts.footer");
+    // $Template->assign("priest", $user);
+    // $Template->assign("title", "Edit " . $user->name);
+    // $Template->render("dashboard.editpriest");
+}, "GET");

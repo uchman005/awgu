@@ -23,7 +23,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form>
+                        <form action="./bishop/create_reflection" method="post" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="reflectiontitle">Title</label>
@@ -31,33 +31,28 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="flectionauthor">Author</label>
-                                    <input type="email" class="form-control" placeholder="Writer`s  name">
+                                    <input type="email" name="author" class="form-control" placeholder="Writer`s  name">
                                 </div>
                                 <div class="form-group">
                                     <label for="body">Body</label>
-                                    <input type="text" class="form-control"  placeholder="write your reflection">
+                                    <input type="text" name="body" class="form-control" placeholder="write your reflection">
                                 </div>
                                 <div class="form-group">
                                     <label for="image1">Image1</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input">
+                                            <input type="file" name="img1" class="custom-file-input">
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                         </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">Upload</span>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="image2">Image2</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input">
+                                            <input type="file" name="img2" class="custom-file-input">
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">Upload</span>
                                         </div>
                                     </div>
                                 </div>
@@ -65,9 +60,9 @@
                                     <label for="image1">Date</label>
                                     <input type="date" class="form-control" placeholder="Enter date" name="dod">
                                 </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-success btn-block">Submit</button>
+                                </div>
                         </form>
                     </div>
                 </div>

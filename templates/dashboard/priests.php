@@ -63,10 +63,10 @@
                                     <td>
                                         <div class="row">
                                             <div class="col-6">
-                                                <a class="btn btn-outline-success btn-sm">Edit</a>
+                                                <a href="./users/edit/<?=$priest->id?>" class="btn btn-outline-success btn-sm">Edit</a>
                                             </div>
                                             <div class="col-6">
-                                                <a class="btn btn-outline-danger btn-sm">Delete</a>
+                                                <a href="./users/delete/<?=$priest->id?>" class="btn btn-outline-danger btn-sm">Delete</a>
                                             </div>
                                         </div>
                                     </td>
