@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Add Priest</h1>
+                    <h1>Edit Priest</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -19,7 +19,7 @@
                     <!-- general form elements -->
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">New Priest</h3>
+                            <h3 class="card-title"> Priest</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -27,15 +27,15 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="">Full Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter fullname" name="name" required>
+                                    <input type="text" class="form-control" placeholder="Enter fullname" name="name" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="date">Date of Ordination</label>
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="parish">Parish</label>
-                                    <input type="text" class="form-control" placeholder="Enter parish" name="parish" required>
+                                    <input type="text" class="form-control" placeholder="Enter parish" name="parish" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputFile">Passport</label>
@@ -52,7 +52,7 @@
                                             <input type="file" name="img" class="custom-file-input" id="exampleInputFile">
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                         </div>
-
+                                    
                                     </div>
                                 </div>
                             </div>
