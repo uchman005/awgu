@@ -27,15 +27,12 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="reflectiontitle">Title</label>
-                                    <input type="text" class="form-control" placeholder="Enter title" name="name">
+                                    <input type="text" class="form-control" placeholder="Enter title" name="title">
                                 </div>
-                                <div class="form-group">
-                                    <label for="flectionauthor">Author</label>
-                                    <input type="text" name="author" class="form-control" placeholder="Writer`s  name">
-                                </div>
+                                <input type="hidden" name="author" value="<?= $Template->storage("accid") ?>">
                                 <div class="form-group">
                                     <label for="body">Body</label>
-                                    <input type="text" name="body" class="form-control" placeholder="write your reflection">
+                                    <textarea class="form-control" name="body" id="body" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="image1">Image1</label>
@@ -56,10 +53,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="image1">Date</label>
-                                    <input type="date" class="form-control" placeholder="Enter date" name="dod">
-                                </div>
+
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-success btn-block">Submit</button>
                                 </div>

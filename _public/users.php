@@ -16,7 +16,7 @@ $Route->add("/awgu/users/login", function () {
         $Template->redirect("/awgu/user/dashboard");
     }
     $Template->setError("Email or password is incorrect, please try again", "warning", "/awgu/login");
-    $Template->redirect("awgu/login");
+    $Template->redirect("/awgu/login");
 }, "POST");
 
 
@@ -102,7 +102,36 @@ $Route->add("/awgu/users/edit/{id}", function ($id) {
     $Template->render("dashboard.editpriest");
 }, "GET");
 
+$Route->add("/awgu/users/edit", function () {
+    $Template = new Template(auth_url);
+    $Core = new Core;
+    $Data = $Core->data;
+    $name = $Data->name;
+    $id = $Data->id;
+    $email = $Data->email;
+    $password = $Data->password;
+    $dod = $Data->dod;
+    $parish = $Data->parish;
+    $done = $Core->EditUser($id, $name, $email, $password, $dod, $parish);
+    if ($done) {
+        $Template->setError("Priest Edited successfully", "success", "/awgu/user/priests");
+        $Template->redirect("/awgu/user/priests");
+    }
+    $Template->setError("Priest Editing failed", "danger", "/awgu/user/priests");
+    $Template->redirect("/awgu/user/priests");
+}, "POST");
 
+$Route->add("/awgu/users/delete/{id}", function ($id) {
+    $Template = new Template(auth_url);
+    $Core = new Core;
+    $done = $Core->DeleteUser($id);
+    if ($done) {
+        $Template->setError("Priest Deleted Successfully", "success", "/awgu/user/priests");
+        $Template->redirect("/awgu/user/priests");
+    }
+    $Template->setError("Priest Deleting failed", "danger", "/awgu/user/priests");
+    $Template->redirect("/awgu/user/priests");
+}, "GET");
 
 
 $Route->add("/awgu/user/reflect", function () {

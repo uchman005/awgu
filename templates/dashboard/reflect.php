@@ -38,7 +38,7 @@
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
-                               
+
                                 <th>Title</th>
                                 <th>Author</th>
                                 <th>Body</th>
@@ -49,23 +49,34 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>sample</td>
-                                <td>John Doe</td>
-                                <td>sample sampkdjfghdh</td>
-                                <td>>fd</td>
-                                <td>vc</td>
-                                <td>h</td>
-                                <td>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <button class="btn btn-outline-success btn-sm">Edit</button>
+                            <?php
+                            $sql = "SELECT * FROM `reflections`";
+                            $reflections = mysqli_query($Core->dbCon, $sql);
+                            while ($reflection = mysqli_fetch_object($reflections)) :
+                            ?>
+                                <tr>
+                                    <td><?= $reflection->title ?></td>
+                                    <td><?php
+                                        echo  $author = $Core->GetUserInfo($reflection->user)->name
+                                        ?></td>
+                                    <td><?= substr($reflection->body, 0, 50) ?>...</td>
+                                    <td>
+                                        <img width="100px" src="_store/<?= $reflection->image1 ?>" alt="<?= $reflection->title ?>">
+                                    </td>
+                                    <td>
+                                        <img width="100px" src="_store/<?= $reflection->image1 ?>" alt="<?= $reflection->title ?>">
+                                    </td>
+                                    <td><?= $reflection->created ?></td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button class="btn btn-outline-success btn-sm">Edit</button>
+                                            </div>
+                                            <div class="col-6"> <button class="btn btn-outline-danger btn-sm">Delete</button></div>
                                         </div>
-                                        <div class="col-6"> <button class="btn btn-outline-danger btn-sm">Delete</button></div>
-                                    </div>
-                                </td>
-                            </tr>
-
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
                         </tbody>
                     </table>
                 </div>

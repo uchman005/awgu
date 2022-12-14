@@ -23,38 +23,30 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="./users/create" method="post" enctype="multipart/form-data">
+                        <form action="./users/edit" method="post">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="">Full Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter fullname" name="name" required >
+                                    <label for="Name">Full Name</label>
+                                    <input type="text" class="form-control" value="<?=$priest->name?>" placeholder="Enter fullname" name="name" required >
                                 </div>
+                                <input type="hidden" name="id" value="<?=$priest->id?>">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required >
+                                    <input type="email" name="email" value="<?=$priest->email?>" class="form-control" id="email" placeholder="Enter email" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required >
+                                    <input type="password" name="password" value="<?=$priest->password?>" class="form-control" id="exampleInputPassword1" placeholder="Password" required >
                                 </div>
                                 <div class="form-group">
                                     <label for="date">Date of Ordination</label>
-                                    <input type="date" class="form-control" placeholder="Enter date" name="dod">
+                                    <input type="date" class="form-control" value="<?=$priest->dod?>" placeholder="Enter date" name="dod">
                                 </div>
                                 <div class="form-group">
                                     <label for="parish">Parish</label>
-                                    <input type="text" class="form-control" placeholder="Enter parish" name="parish" required >
+                                    <input type="text" class="form-control" value="<?=$priest->parish?>" placeholder="Enter parish" name="parish" required >
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputFile">Passport</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" name="img" class="custom-file-input" id="exampleInputFile">
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
+                            
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-success btn-block">Submit</button>

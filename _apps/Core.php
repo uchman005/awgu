@@ -3,6 +3,8 @@
 //Write your custome class/methods here
 namespace Apps;
 
+use mysqli;
+
 class Core extends Model
 {
 
@@ -31,9 +33,9 @@ class Core extends Model
 		}
 		return 0;
 	}
-	public function EditUser($id, $name, $email, $password, $role)
+	public function EditUser($id, $name, $email, $password, $dod, $parish)
 	{
-		$sql = "UPDATE `users` SET `name`='$name',`role`='$role',`email`='$email',`password`='$password' WHERE  `id` = '$id' ";
+		$sql = "UPDATE `users` SET `name`='$name',`parish`= '$parish',`dod`='$dod',`email`='$email',`password`='$password' WHERE  `id` = '$id' ";
 		return mysqli_query($this->dbCon, $sql);
 	}
 	public function CreateUser($email, $name, $password, $dod, $parish, $img_name)
@@ -41,7 +43,16 @@ class Core extends Model
 		$sql = "INSERT INTO `users` (`name`,`email`, `password`, `dod`, `parish`,`img`) VALUES ('$name', '$email','$password', '$dod', '$parish', '$img_name')";
 		return mysqli_query($this->dbCon, $sql);
 	}
-
+	public function DeleteUser($id)
+	{
+		$sql = "DELETE FROM `users` WHERE `id`='$id'";
+		return mysqli_query($this->dbCon, $sql);
+	}
+	public function CreateReflection($title, $author, $body, $img_name, $img_name2)
+	{
+		$sql = "INSERT INTO `reflections`(`title`, `user`, `body`, `image1`, `image2`) VALUES ('$title','$author','$body','$img_name','$img_name2')";
+		return mysqli_query($this->dbCon, $sql);
+	}
 	// public function EditReflection($id, $title, $body, $image, $image2)
 	// {
 	// 	$sql = "UPDATE `users` SET `name`='$name',`role`='$role',`email`='$email',`password`='$password' WHERE  `id` = '$id' ";
