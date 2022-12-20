@@ -32,7 +32,7 @@
                                 <input type="hidden" name="author" value="<?= $Template->storage("accid") ?>">
                                 <div class="form-group">
                                     <label for="body">Body</label>
-                                    <textarea class="form-control" name="body" id="body" cols="30" rows="10"></textarea>
+                                    <textarea class="form-control" name="body" id="summernote"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="image1">Image1</label>

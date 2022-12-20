@@ -23,51 +23,22 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form>
+                        <form action="./reflection/edit" method="POST">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="reflectiontitle">Title</label>
-                                    <input type="text" class="form-control" placeholder="Enter title" name="name">
+                                    <label for="reflection_title">Title</label>
+                                    <input type="text" class="form-control" value="<?= $reflection->title ?>" placeholder="Enter title" name="title">
                                 </div>
-                                <div class="form-group">
-                                    <label for="flectionauthor">Author</label>
-                                    <input type="text" class="form-control" placeholder="Writer`s  name">
-                                </div>
+                                <input type="hidden" name="id" value="<?= $reflection->id ?>">
                                 <div class="form-group">
                                     <label for="body">Body</label>
-                                    <input type="text" class="form-control"  placeholder="write your reflection">
+                                    <textarea name="body" id="summernote"><?= $reflection->body ?></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label for="image1">Image1</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input">
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">Upload</span>
-                                        </div>
-                                    </div>
+
+
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-success btn-block">Submit</button>
                                 </div>
-                                <div class="form-group">
-                                    <label for="image2">Image2</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input">
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">Upload</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="image1">Date</label>
-                                    <input type="date" class="form-control" placeholder="Enter date" name="dod">
-                                </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </div>
                         </form>
                     </div>
                 </div>

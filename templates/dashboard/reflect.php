@@ -5,6 +5,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Bishop</h1>
+                    <h4><?= $Self->Toast(); ?></h4>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -61,18 +62,24 @@
                                         ?></td>
                                     <td><?= substr($reflection->body, 0, 50) ?>...</td>
                                     <td>
-                                        <img width="100px" src="_store/<?= $reflection->image1 ?>" alt="<?= $reflection->title ?>">
+                                        <?php if ($reflection->image1) : ?>
+                                            <img width="100px" src="_store/<?= $reflection->image1 ?>">
+                                        <?php endif; ?>
                                     </td>
                                     <td>
-                                        <img width="100px" src="_store/<?= $reflection->image1 ?>" alt="<?= $reflection->title ?>">
+                                        <?php if ($reflection->image2) : ?>
+                                            <img width="100px" src="_store/<?= $reflection->image2 ?>">
+                                        <?php endif; ?>
                                     </td>
                                     <td><?= $reflection->created ?></td>
                                     <td>
                                         <div class="row">
                                             <div class="col-6">
-                                                <button class="btn btn-outline-success btn-sm">Edit</button>
+                                                <a href="./reflections/edit/<?= $reflection->id ?>" class="btn btn-outline-success btn-sm">Edit</a>
                                             </div>
-                                            <div class="col-6"> <button class="btn btn-outline-danger btn-sm">Delete</button></div>
+                                            <div class="col-6">
+                                                <a href="./reflections/delete/<?= $reflection->id ?>" class="btn btn-outline-danger btn-sm">Delete</a>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>

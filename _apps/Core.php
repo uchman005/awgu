@@ -53,10 +53,23 @@ class Core extends Model
 		$sql = "INSERT INTO `reflections`(`title`, `user`, `body`, `image1`, `image2`) VALUES ('$title','$author','$body','$img_name','$img_name2')";
 		return mysqli_query($this->dbCon, $sql);
 	}
-	// public function EditReflection($id, $title, $body, $image, $image2)
-	// {
-	// 	$sql = "UPDATE `users` SET `name`='$name',`role`='$role',`email`='$email',`password`='$password' WHERE  `id` = '$id' ";
-	// 	return mysqli_query($this->dbCon, $sql);
-
-	// }
+	public function EditReflection($id, $title, $body)
+	{
+		$sql = "UPDATE `reflections` SET `title`='$title', `body`='$body' WHERE  `id` = '$id' ";
+		return mysqli_query($this->dbCon, $sql);
+	}
+	public function GetReflection($id)
+	{
+		$sql = "SELECT * FROM `reflections` WHERE `id` = $id";
+		$reflection = mysqli_query($this->dbCon, $sql);
+		if ($reflection->num_rows) {
+			$reflection = mysqli_fetch_object($reflection);
+			return $reflection;
+		}
+		return false;
+	}
+	public function DeleteReflection($id)
+	{
+		return mysqli_query($this->dbCon, "DELETE FROM `reflections` WHERE `id` ='$id'");
+	}
 }
