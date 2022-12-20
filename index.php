@@ -34,12 +34,12 @@ $Route->add('/awgu/{page}', function ($page) {
 
 //Logout Sessions//
 $Route->add(
-    '/auth/logout',
+    '/awgu/auth/logout',
     function () {
         $Template = new Apps\Template;
         $Template->expire();
         $Template->cleanAll(session_delete_timout);
-        $Template->redirect(auth_url);
+        $Template->redirect("/awgu/");
     },
     'GET'
 );
