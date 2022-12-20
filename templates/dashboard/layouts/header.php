@@ -66,7 +66,7 @@ $User = $Core->GetUserInfo($Template->storage("accid"));
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="_store/<?=$User->img?>" class="img-circle elevation-2" alt="User Image">
+                        <img src="_store/<?= $User->img ?>" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
                         <a href="#" class="d-block"><?= $User->name ?></a>
@@ -77,22 +77,31 @@ $User = $Core->GetUserInfo($Template->storage("accid"));
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-                        <li class="nav-item menu-open">
-                            <a href="./user/priests" class="nav-link active">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>
-                                    Priests
-                                </p>
-                            </a>
+                        <?php if ($User->role == 'bishop') : ?>
+                            <li class="nav-item menu-open">
+                                <a href="./user/priests" class="nav-link">
+                                    <i class="nav-icon fas fa-user"></i>
+                                    <p>
+                                        Priests
+                                    </p>
+                                </a>
 
-                        </li>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./user/reflect" class="nav-link">
+                                    <i class="nav-icon fas fa-book-open"></i>
+                                    <p>
+                                        Reflections
+                                    </p>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+
                         <li class="nav-item">
                             <a href="./user/reflect" class="nav-link">
-                                <i class="nav-icon fas fa-book-open"></i>
+                                <i class="nav-icon fas fa-comments"></i>
                                 <p>
-                                    Reflections
+                                    Messages
                                 </p>
                             </a>
                         </li>
