@@ -5,6 +5,7 @@ define('DOT', '.');
 require_once DOT . "/bootstrap.php";
 require_once DOT . "/_public/reflection.php";
 require_once DOT . "/_public/users.php";
+require_once DOT . "/_public/message.php";
 
 //Home page//
 $Route->add('/awgu/', function () {

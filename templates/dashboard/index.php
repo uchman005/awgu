@@ -76,7 +76,7 @@
                         <div class="icon">
                             <i class="fas fa-comments"></i>
                         </div>
-                        <a href="./user/reflect" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="./user/messages" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 

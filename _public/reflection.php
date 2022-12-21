@@ -11,12 +11,6 @@ $Route->add("/awgu/bishop/reflection", function () {
     $Template->render("reflections");
 }, "GET");
 
-$Route->add("/awgu/login", function () {
-    $Template = new Template;
-    $Template->assign("title", "Login");
-    $Template->render("login");
-}, "GET");
-
 $Route->add("/awgu/bishop/reflection/{id}", function ($id) {
     $Template = new Template;
     $Core = new Core;

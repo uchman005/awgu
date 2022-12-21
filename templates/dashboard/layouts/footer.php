@@ -51,7 +51,7 @@
     // Summernote
     $('#summernote').summernote({
         toolbar: [
-          // [groupName, [list of button]]
+        
           ['style', ['bold', 'italic', 'underline', 'clear']],
           ['font', ['strikethrough', 'superscript', 'subscript']],
           ['fontsize', ['fontsize']],

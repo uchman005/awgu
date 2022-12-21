@@ -35,8 +35,8 @@ define("encrypt_salt","7WAO342QFANY6IKBF7L7SWEUU79WL3VMT920VB5NQMW");
 define("default_timezone","Africa/Lagos");
 define("offset_timezone",true);
 define("session_path","./_sessions/");
-define("session_timout",20);
-define("session_delete_timout",30);
+define("session_timout",200);
+define("session_delete_timout",300);
 define("auth_session_key","logged_in");
 define("auth_url","/awgu/login");
 

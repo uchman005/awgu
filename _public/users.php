@@ -3,6 +3,15 @@
 use Apps\Template;
 use Apps\Core;
 
+$Route->add("/awgu/login", function () {
+    $Template = new Template;
+    if ($Template->storage('accid')) {
+        $Template->redirect("/awgu/user/dashboard");
+    }
+    $Template->assign("title", "Login");
+    $Template->render("login");
+}, "GET");
+
 $Route->add("/awgu/users/login", function () {
     $Template = new Template;
     $Core = new Core;

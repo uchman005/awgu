@@ -1,1 +1,0 @@
-a:2:{s:5:"token";O:8:"stdClass":3:{s:3:"tik";i:1671481735;s:3:"tok";s:40:"aeabc95d4869687537da47e21ee2dc43c941b97a";s:5:"token";s:40:"93dbb605d7c75c1defda0f9e99f08e6a83e7d16e";}s:6:"errors";a:3:{s:5:"error";s:42:"You are not allowed to perform this action";s:4:"type";s:6:"danger";s:5:"route";s:18:"/awgu/user/reflect";}}

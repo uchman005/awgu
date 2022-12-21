@@ -72,4 +72,19 @@ class Core extends Model
 	{
 		return mysqli_query($this->dbCon, "DELETE FROM `reflections` WHERE `id` ='$id'");
 	}
+	public function SaveMessage($title, $author, $body)
+	{
+		$sql = "INSERT INTO `messages` (`title`, `author`, `body`) VALUES ('$title', '$author', '$body')";
+		return mysqli_query($this->dbCon, $sql);
+	}
+
+	public function GetMessage($id){
+		$sql = "SELECT * FROM `messages` WHERE `id` = $id";
+		$reflection = mysqli_query($this->dbCon, $sql);
+		if ($reflection->num_rows) {
+			$reflection = mysqli_fetch_object($reflection);
+			return $reflection;
+		}
+		return false;
+	}
 }
