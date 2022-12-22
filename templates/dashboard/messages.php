@@ -51,7 +51,7 @@
                         </thead>
                         <tbody>
                             <?php
-                            $sql = "SELECT * FROM `messages`";
+                            $sql = "SELECT * FROM `messages` ORDER BY `id` DESC";
                             $reflections = mysqli_query($Core->dbCon, $sql);
                             while ($reflection = mysqli_fetch_object($reflections)) :
                             ?>
@@ -74,7 +74,7 @@
                                                     <a href="./messages/delete/<?= $reflection->id ?>" class="btn btn-outline-danger btn-sm">Delete</a>
                                                 </div>
                                                 <div class="col-4">
-                                                    <a href="./messages/delete/<?= $reflection->id ?>" class="btn btn-outline-info btn-sm">View</a>
+                                                    <a href="./messages/view/<?= $reflection->id ?>" class="btn btn-outline-info btn-sm">View</a>
                                                 </div>
                                             <?php else : ?>
                                                 <div class="col-12">

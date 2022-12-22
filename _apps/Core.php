@@ -78,7 +78,8 @@ class Core extends Model
 		return mysqli_query($this->dbCon, $sql);
 	}
 
-	public function GetMessage($id){
+	public function GetMessage($id)
+	{
 		$sql = "SELECT * FROM `messages` WHERE `id` = $id";
 		$reflection = mysqli_query($this->dbCon, $sql);
 		if ($reflection->num_rows) {
@@ -86,5 +87,14 @@ class Core extends Model
 			return $reflection;
 		}
 		return false;
+	}
+	public function EditMessage($id, $title, $body)
+	{
+		$sql = "UPDATE `messages` SET `title`='$title', `body`='$body' WHERE  `id` = '$id' ";
+		return mysqli_query($this->dbCon, $sql);
+	}
+	public function DeleteMessage($id)
+	{
+		return mysqli_query($this->dbCon, "DELETE FROM `messages` WHERE `id` ='$id'");
 	}
 }

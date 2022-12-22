@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Edit Reflection</h1>
+                    <h1>Edit Message</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -19,20 +19,20 @@
                     <!-- general form elements -->
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">Edit Reflection</h3>
+                            <h3 class="card-title">Edit Message</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="./reflection/edit" method="POST">
+                        <form action="./message/edit" method="POST">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="reflection_title">Title</label>
-                                    <input type="text" class="form-control" value="<?= $reflection->title ?>" placeholder="Enter title" name="title">
+                                    <input type="text" class="form-control" value="<?= $message->title ?>" placeholder="Enter title" name="title">
                                 </div>
-                                <input type="hidden" name="id" value="<?= $reflection->id ?>">
+                                <input type="hidden" name="id" value="<?= $message->id ?>">
                                 <div class="form-group">
                                     <label for="body">Body</label>
-                                    <textarea name="body" id="summernote"><?= $reflection->body ?></textarea>
+                                    <textarea name="body" id="summernote"><?= $message->body ?></textarea>
                                 </div>
 
 

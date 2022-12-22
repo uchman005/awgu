@@ -24,7 +24,7 @@
                     <!-- Post Modern-->
                     <div class="wow scaleFadeIn">
                         <article class="post-modern">
-                            <a class="post-modern-media" href="./bishop/reflection/<?= $reflection->id ?>">
+                            <a class="post-modern-media" href="./bishop/reflection/<?= $reflection->id ?>/<?= $reflection->title ?>">
                                 <?php if (isset($reflection->image1) && $reflection->image1 != "") : ?>
                                     <img src="_store/<?= $reflection->image1 ?>" alt="" width="571" height="353">
                                 <?php else : ?>
@@ -32,7 +32,7 @@
                                 <?php endif; ?>
 
                             </a>
-                            <h4 class="post-modern-title"><a class="underlined" href="./bishop/reflection/<?= $reflection->id ?>"><?= $reflection->title ?></a></h4>
+                            <h4 class="post-modern-title"><a class="underlined" href="./bishop/reflection/<?= $reflection->id ?>/<?= $reflection->title ?>"><?= $reflection->title ?></a></h4>
                             <ul class="post-modern-meta">
                                 <li><?= $Core->GetUserInfo($reflection->user)->name ?></li>
                                 <li>
@@ -40,7 +40,7 @@
                                 </li>
                             </ul>
                             <p class="reflection-body"><?= $reflection->body ?></p>
-                            <a href="./bishop/reflection/<?= $reflection->id ?>" class="button">Read More</a>
+                            <a href="./bishop/reflection/<?= $reflection->id ?>/<?= $reflection->title ?>" class="button">Read More</a>
                         </article>
                     </div>
                 </div>

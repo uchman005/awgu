@@ -98,7 +98,7 @@ $User = $Core->GetUserInfo($Template->storage("accid"));
                         <?php endif; ?>
 
                         <li class="nav-item">
-                            <a href="./user/reflect" class="nav-link">
+                            <a href="./user/messages" class="nav-link">
                                 <i class="nav-icon fas fa-comments"></i>
                                 <p>
                                     Messages

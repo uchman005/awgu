@@ -11,13 +11,14 @@ $Route->add("/awgu/bishop/reflection", function () {
     $Template->render("reflections");
 }, "GET");
 
-$Route->add("/awgu/bishop/reflection/{id}", function ($id) {
+$Route->add("/awgu/bishop/reflection/{id}/{title}", function ($id, $title) {
     $Template = new Template;
     $Core = new Core;
     $Template->addheader("layouts.header");
     $reflection = $Core->GetReflection($id);
     $Template->assign("reflection", $reflection);
     $Template->addfooter("layouts.footer");
+    $Template->assign("description", $reflection->title);
     $Template->assign("title", $reflection->title);
     $Template->render("reflection");
 }, "GET");
